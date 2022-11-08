@@ -40,8 +40,60 @@ li {
 
 .header {
   grid-row: 1 / 2;
-  grid-column: 1 / 3;
+  grid-column: 2 / 3;
   background-color: lightgreen;
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 4px;
+}
+
+.header-top-half {
+  grid-row: 1 / 2;
+  grid-column: 1 / 3;
+  background-color: rgb(38, 154, 40);
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+}
+
+.header-top-left {
+  background-color: beige;
+}
+
+.header-top-right {
+  background-color: brown;
+  justify-self: right;
+}
+
+.replace-with-real-image {
+  background-color: purple;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 10px solid pink;
+  border-radius: 50%;
+}
+
+.header-bottom-half {
+  grid-row: 2 / 3;
+  grid-column: 1 / 3;
+  background-color: orange;
+  display: grid;
+  grid-template-columns: 6fr 4fr
+}
+
+.header-bottom-left {
+  background-color: rgb(149, 84, 84);
+  display: grid;
+  grid-template-columns: 100px 1fr;
+}
+
+.header-bottom-right {
+  background-color: aquamarine;
+}
+
+#search {
+  width: 500px;
 }
 
 .main-content {
@@ -50,14 +102,28 @@ li {
   background-color: lightcoral;
   display: grid;
   grid-template-columns: 1fr 300px;
+  grid-template-rows: 85px 1fr;
+}
+
+.main-content > h2 {
+  padding: 15px;
+}
+
+.right-main-content-header {
+  justify-content: right;
 }
 
 .projects {
   display: grid;
   grid-column: 1 / 2;
+  grid-row: 2 / 3;
   gap: 15px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   padding: 15px;
+}
+
+.projects-heading {
+  display: block;
 }
 
 .project {
@@ -65,17 +131,17 @@ li {
   background-color: rgb(253, 142, 253);
   grid-auto-flow: column;
   border-left: 10px solid rgb(89, 163, 193);
-  /* box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); */
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
   border-radius: 8px;
 }
 
 .right-info {
   grid-column: 2 / 3;
+  grid-row: 2 / 3;
   background-color: lightcyan;
   padding: 15px;
   display: grid;
-  grid-template-rows: 450px 450px;
+  grid-template-rows: 350px 85px 350px;
   grid-template-columns: 1fr;
   gap: 15px;
 }
@@ -84,12 +150,15 @@ li {
   grid-row: 1 / 2;
   background-color: aquamarine;
   max-height: 600px;
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 8px 8px 5px 0px rgba(0,0,0,0.5);
 }
 
 .trending {
-  grid-row: 2 / 3;
+  grid-row: 3 / 4;
   background-color: lightslategray;
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 8px 8px 5px 0px rgba(0,0,0,0.5);
 }
 
+.trending-header {
+  align-self: flex-end;
+}
