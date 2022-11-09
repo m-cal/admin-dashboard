@@ -92,6 +92,16 @@ li {
   background-color: aquamarine;
 }
 
+.header-bottom-right button {
+  color: white;
+  font-size: 1.25rem;
+  height: 50px;
+  width: 120px;
+  background-color: #1992d4;
+  border: 1px solid #1992d4;
+  border-radius: 25px
+}
+
 #search {
   width: 500px;
 }
