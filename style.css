@@ -284,3 +284,7 @@ a:hover {
 .header-top-left input:focus {
   border: none;
 }
+
+.project:hover {
+  border-left: 10px solid #1992d4;
+}
