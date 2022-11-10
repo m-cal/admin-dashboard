@@ -58,6 +58,15 @@ li {
 
 .header-top-left {
   background-color: beige;
+  display: flex;
+}
+
+.header-top-left > input {
+  width: 80%;
+  height: 25px;
+  border: 1px solid rgba(83, 26, 26, 0);
+  border-radius: 50px;
+  background-color: pink;
 }
 
 .header-top-right {
@@ -85,8 +94,19 @@ li {
 
 .header-bottom-left {
   background-color: rgb(149, 84, 84);
-  display: grid;
+  display: flex;
   grid-template-columns: 100px 1fr;
+  align-items: center;
+  padding-left: 50px;
+  gap: 20px;
+}
+
+.active-user-image {
+  width: 60px;
+  height: 60px;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 50%;
 }
 
 .header-bottom-right {
@@ -189,22 +209,15 @@ li {
 }
 
 .user {
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  grid-template-rows: none;
-  grid-auto-rows: none;
-}
-
-.user-text {
-  grid-template-columns: 2 / 3;
+  display: flex;
+  gap: 15px;
 }
 
 .user-image {
-  grid-template-columns: 1 / 2;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   background-color: black;
-  border: 1px black solid;
+  border: 1px solid black;
   border-radius: 50%;
 }
 
